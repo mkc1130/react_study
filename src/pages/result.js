@@ -7,4 +7,4 @@ function Result() {
   );
 }
 
-export default Results;
+export default Result;

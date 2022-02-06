@@ -1,17 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../styles/result.css';
+import {useLocation} from 'react-router-dom';
 
-class Result extends Component {
-  static defaultProps = {
-    id: 'missing data',
-    pw: 'missing data'
-  }
-  render() {
-    return (
-      <div>ID : {this.props.id}<br />
-           PW : {this.props.pw}</div>
-    );
-  }
+function Result() {
+  const location = useLocation();
+  console.log(location);
+  return (
+    <div>ID : {location.state.id}<br />
+         PW : {location.state.pw}</div>
+  );
 }
 
 
